@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "wRp27OCE2xPusd9OoNSoz8sftEXjYMxoB1+ecpEtMcwgICDuicNYKZ3D+9BhYsGmv/IMWBpo/q6tFOxDq/vhpg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sushm\\source\\repos\\weathernotifier\\weathernotifier\\weathernotifier.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sushm\\.nuget\\packages\\csharpdiscordwebhook.net\\1.0.0\\csharpdiscordwebhook.net.1.0.0.nupkg.sha512",
+    "C:\\Users\\sushm\\.nuget\\packages\\discord.net.core\\3.3.2\\discord.net.core.3.3.2.nupkg.sha512",
+    "C:\\Users\\sushm\\.nuget\\packages\\discord.net.rest\\3.3.2\\discord.net.rest.3.3.2.nupkg.sha512",
+    "C:\\Users\\sushm\\.nuget\\packages\\discord.net.webhook\\3.3.2\\discord.net.webhook.3.3.2.nupkg.sha512",
+    "C:\\Users\\sushm\\.nuget\\packages\\discord.webhooks\\1.0.0\\discord.webhooks.1.0.0.nupkg.sha512",
+    "C:\\Users\\sushm\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\sushm\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
+    "C:\\Users\\sushm\\.nuget\\packages\\system.interactive.async\\5.0.0\\system.interactive.async.5.0.0.nupkg.sha512",
+    "C:\\Users\\sushm\\.nuget\\packages\\system.linq.async\\5.0.0\\system.linq.async.5.0.0.nupkg.sha512",
+    "C:\\Users\\sushm\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
