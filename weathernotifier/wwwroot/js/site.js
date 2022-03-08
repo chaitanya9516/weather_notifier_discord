@@ -1,15 +1,17 @@
-﻿var url = 'https://api.openweathermap.org/data/2.5/weather?q=Windsor&appid=8214442dc93453b08f8531fbe4875c84';
+﻿
+var url = 'https://api.weatherapi.com/v1/current.json?key=1df94f076a6d400293225723220803&q=windsor&aqi=yes';
 
-var temp =
+
+var temperature =
     fetch(url)
     .then(response => response.json())
         .then((data) => {
-            var temp2 = data.main.temp;
-            console.log(temp2)
+            var temp = data.current.temp_c;
+            console.log(temp)
             $.ajax({
                 url: "/home/index",
                 type: "POST",
-                data: {temp:temp2},
+                data: {temperature:temp},
                 success: function (data) {
                     console.log(data);
 
