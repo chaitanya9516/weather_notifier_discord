@@ -27,20 +27,33 @@ namespace weathernotifier.Controllers
             DiscordWebhook hook = new DiscordWebhook();
             hook.Url = "https://discordapp.com/api/webhooks/948481501618655292/JsWWzREh2NFtq30Lhl9Kniz6EoNnSI1AUoE4b42V0OHFuKEncrrzGJtVLk4Yl-Wa3QgU";
             DiscordMessage message = new DiscordMessage();
-            message.Content = "Temperature : " + temperature + "c" ;
+            message.Content = "Today's Temperature & Classes : ";
 
-            DiscordEmbed embed = new DiscordEmbed(); 
+            DiscordEmbed embed = new DiscordEmbed();
             embed.Fields = new List<EmbedField>();
 
-            DateTime today = DateTime.Today;
-            var Today = today.DayOfWeek.ToString();
+            DateTime dayname = DateTime.Today;
+            DateTime date = DateTime.Now;
+            var day = dayname.DayOfWeek.ToString();
+            var time = date.ToShortTimeString();
 
-            if (Today == "Monday")
+            if (day == "Monday" && time == "11:00 AM")
             {
                 embed.Fields.Add(new EmbedField() { Name = "Temperature : ", Value = temperature + "c", InLine = false });
                 embed.Fields.Add(new EmbedField() { Name = "1 - Riverside", Value = "Room - 004, Time - 12PM - 02PM", InLine = false });
+
+                message.Embeds = new List<DiscordEmbed>();
+                message.Embeds.Add(embed);
+                //DiscordEmbed embed = new DiscordEmbed();
+                //embed.Title = "Embed title";
+                //embed.Description = "Embed description";
+                //embed.Url = "Embed Url";
+                embed.Timestamp = DateTime.Now;
+
+                hook.Send(message);
+
             }
-            else if (Today == "Tuesday")
+            else if (day == "Tuesday" && time == "10:00 AM")
             {
                 embed.Fields.Add(new EmbedField() { Name = "Temperature : ", Value = temperature + "c", InLine = false });
                 embed.Fields.Add(new EmbedField() { Name = "333 - Riverside", Value = "Room - 205, Time - 11AM - 12PM", InLine = false });
@@ -48,38 +61,80 @@ namespace weathernotifier.Controllers
                 embed.Fields.Add(new EmbedField() { Name = "333 - Riverside", Value = "Room - 206, Time - 04PM - 06PM", InLine = false });
                 embed.Fields.Add(new EmbedField() { Name = "1 - Riverside", Value = "Room - 008, Time - 06PM - 08PM", InLine = false });
 
+                message.Embeds = new List<DiscordEmbed>();
+                message.Embeds.Add(embed);
+                //DiscordEmbed embed = new DiscordEmbed();
+                //embed.Title = "Embed title";
+                //embed.Description = "Embed description";
+                //embed.Url = "Embed Url";
+                embed.Timestamp = DateTime.Now;
+
+                hook.Send(message);
+
+
             }
-            else if (Today == "Wednesday")
+            else if (day == "Wednesday" && time == "03:00 PM")
             {
                 embed.Fields.Add(new EmbedField() { Name = "Temperature : ", Value = temperature + "c", InLine = false });
                 embed.Fields.Add(new EmbedField() { Name = "333 - Riverside", Value = "Room - 008, Time - 04PM - 07PM", InLine = false });
 
+                message.Embeds = new List<DiscordEmbed>();
+                message.Embeds.Add(embed);
+                //DiscordEmbed embed = new DiscordEmbed();
+                //embed.Title = "Embed title";
+                //embed.Description = "Embed description";
+                //embed.Url = "Embed Url";
+                embed.Timestamp = DateTime.Now;
+
+                hook.Send(message);
+
             }
-            else if (Today == "Thursday")
+            else if (day == "Thursday" && time == "10:00 PM")
             {
                 embed.Fields.Add(new EmbedField() { Name = "Temperature : ", Value = temperature + "c", InLine = false });
                 embed.Fields.Add(new EmbedField() { Name = "333 - Riverside", Value = "Room - 206, Time - 11AM - 02PM", InLine = false });
                 embed.Fields.Add(new EmbedField() { Name = "1 - Riverside", Value = "Room - 007, Time - 02PM - 04PM", InLine = false });
 
+                message.Embeds = new List<DiscordEmbed>();
+                message.Embeds.Add(embed);
+                //DiscordEmbed embed = new DiscordEmbed();
+                //embed.Title = "Embed title";
+                //embed.Description = "Embed description";
+                //embed.Url = "Embed Url";
+                embed.Timestamp = DateTime.Now;
+
+                hook.Send(message);
+
             }
-            else
+            else if (day == "Thursday" && time == "03:00 PM")
             {
                 embed.Fields.Add(new EmbedField() { Name = "Temperature : ", Value = temperature + "c", InLine = false });
                 embed.Fields.Add(new EmbedField() { Name = "zeklaman", Value = "Room-5, Time - 04PM - 06PM", InLine = false });
                 embed.Fields.Add(new EmbedField() { Name = "zeklaman", Value = "Room-5, Time - 06PM - 08PM", InLine = false });
-                //embed.Fields.Add(new EmbedField() { Name = "Field Name 2", Value = "Field Value 2", InLine = true });
+
+                message.Embeds = new List<DiscordEmbed>();
+                message.Embeds.Add(embed);
+                //DiscordEmbed embed = new DiscordEmbed();
+                //embed.Title = "Embed title";
+                //embed.Description = "Embed description";
+                //embed.Url = "Embed Url";
+                embed.Timestamp = DateTime.Now;
+
+                hook.Send(message);
             }
 
+            //public void SendMsg()
+            //{
+            //    message.Embeds = new List<DiscordEmbed>();
+            //    message.Embeds.Add(embed);
+            //    //DiscordEmbed embed = new DiscordEmbed();
+            //    //embed.Title = "Embed title";
+            //    //embed.Description = "Embed description";
+            //    //embed.Url = "Embed Url";
+            //    embed.Timestamp = DateTime.Now;
 
-            message.Embeds = new List<DiscordEmbed>();
-            message.Embeds.Add(embed);
-            //DiscordEmbed embed = new DiscordEmbed();
-            //embed.Title = "Embed title";
-            //embed.Description = "Embed description";
-            //embed.Url = "Embed Url";
-            //embed.Timestamp = DateTime.Now;
-
-            hook.Send(message);
+            //    hook.Send(message);
+            //}
 
             return View();
         }
